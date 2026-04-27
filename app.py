@@ -14,7 +14,7 @@ API_URL = "http://localhost:8000"
 
 # ── Header ────────────────────────────────────────────────
 st.title("🔍 arXiv Semantic Search")
-st.markdown("Search over **1,911 research papers** using semantic embeddings + cross-encoder re-ranking")
+st.markdown("Search over **21,536 research papers** using semantic embeddings + cross-encoder re-ranking")
 
 # ── Sidebar — stats ───────────────────────────────────────
 with st.sidebar:

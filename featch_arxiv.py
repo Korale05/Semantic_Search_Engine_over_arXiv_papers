@@ -4,7 +4,7 @@ import json
 import time
 import os
 
-def fetch_papers(query,max_results=500):
+def fetch_papers(query,max_results=2000):
     print(f"Featching '{query}' papers from arXiv...")
     
     client = arxiv.Client(
@@ -35,19 +35,26 @@ def fetch_papers(query,max_results=500):
     
     return papers
 
-# Featch from multiple topics to get diversity
-
+# 12 topics covering the full ML/NLP/CV landscape
 topics = [
     "machine learning",
-    "natural language processing", 
+    "natural language processing",
     "computer vision",
-    "deep learning optimization"
+    "deep learning optimization",
+    "transformer architecture attention",
+    "large language models",
+    "reinforcement learning",
+    "graph neural networks",
+    "generative adversarial networks",
+    "speech recognition audio",
+    "object detection image segmentation",
+    "question answering reading comprehension"
 ]
 
 all_papers = []
 
 for topic in topics:
-    papers = fetch_papers(topic,max_results=500)
+    papers = fetch_papers(topic,max_results=2000)
     all_papers.extend(papers)
     print(f"Topics '{topic}' : {len(papers)} papers featched")
     time.sleep(5) # Wait between topics

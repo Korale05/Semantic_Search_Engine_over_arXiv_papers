@@ -143,7 +143,7 @@ def stats():
         "embedding_dimension": 384,
         "index_type": "HNSW",
         "evaluation": {
-            "bm25_mrr": 0.125,
+            "bm25_mrr": 0.40,
             "semantic_mrr": 0.900,
             "reranked_mrr": 1.000
         }

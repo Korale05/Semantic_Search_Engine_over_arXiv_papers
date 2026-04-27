@@ -81,3 +81,14 @@ input box → results
 STEP 6 — Deploy
 HuggingFace Spaces
 Share link
+
+
+
+
+
+uvicorn api:app --port 8000
+
+
+streamlit run app.py
+
+
