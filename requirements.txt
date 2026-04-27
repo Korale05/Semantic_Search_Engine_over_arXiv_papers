@@ -1,0 +1,14 @@
+# requirements.txt — paste this and run: pip install -r requirements.txt
+sentence-transformers
+faiss-cpu
+arxiv
+fastapi
+uvicorn
+streamlit
+pandas
+numpy
+tqdm
+rank-bm25
+scikit-learn
+accelerate
+tensorflow

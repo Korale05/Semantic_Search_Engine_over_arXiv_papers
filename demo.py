@@ -1,0 +1,3 @@
+documents = ["Virat Kohli’s chance theory emphasizes maintaining maximum effort"," discipline, and self-belief even when the probability of success is tiny, allowing a small hope to grow into a 10% or 30% chance and eventually achieving magical results. This mindset, which fueled Royal Challengers Bengaluru's (RCB) 2024 playoff ","push, focuses on controlling personal preparation and intensity over external outcomes"]
+tokenized_docs = [doc.lower() for doc in documents]
+print(tokenized_docs)

@@ -1,0 +1,22 @@
+[
+    {
+        "query": "BERT pre-training language model",
+        "relevant_keywords": ["BERT", "pre-training", "language model", "masked language"]
+    },
+    {
+        "query": "image classification neural network",
+        "relevant_keywords": ["image", "classification", "convolutional", "visual", "recognition"]
+    },
+    {
+        "query": "reinforcement learning policy gradient",
+        "relevant_keywords": ["reinforcement", "policy", "reward", "agent", "gradient"]
+    },
+    {
+        "query": "text summarization abstractive",
+        "relevant_keywords": ["summarization", "abstractive", "summary", "document"]
+    },
+    {
+        "query": "generative adversarial network image synthesis",
+        "relevant_keywords": ["GAN", "generative", "adversarial", "synthesis", "generator"]
+    }
+]
