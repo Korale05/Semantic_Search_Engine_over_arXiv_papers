@@ -14,7 +14,7 @@ st.set_page_config(
 )
 
 # ── Your HuggingFace repo ──────────────────────────────────
-HF_REPO_ID = "your-username/arxiv-semantic-search"  # ← change this
+HF_REPO_ID = "onkar1718/arxiv-semantic-search"  # ← change this
 
 # ── Load everything (cached so it only runs once) ─────────
 @st.cache_resource
