@@ -80,7 +80,7 @@ def search_with_reranking(query, top_k=5, candidate_pool=50):
 
     t2 = time.time()
     pairs = [[query, f"{c['title']}. {c['abstract'][:300]}"] for c in candidates]
-    scores = cross_encoder.predict(pairs)
+    scores = cross_encoder.predict(pairs).tolist()
     rerank_ms = (time.time() - t2) * 1000
 
     ranked = sorted(zip(scores, candidates), reverse=True)
