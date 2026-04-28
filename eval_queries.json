@@ -1,22 +1,82 @@
 [
     {
         "query": "BERT pre-training language model",
-        "relevant_keywords": ["BERT", "pre-training", "language model", "masked language"]
+        "relevant_keywords": ["BERT", "pre-training", "masked language", "bidirectional encoder"]
     },
     {
         "query": "image classification neural network",
-        "relevant_keywords": ["image", "classification", "convolutional", "visual", "recognition"]
+        "relevant_keywords": ["image classification", "convolutional", "visual recognition", "CNN"]
     },
     {
         "query": "reinforcement learning policy gradient",
-        "relevant_keywords": ["reinforcement", "policy", "reward", "agent", "gradient"]
+        "relevant_keywords": ["policy gradient", "reinforcement learning", "reward", "actor-critic"]
     },
     {
         "query": "text summarization abstractive",
-        "relevant_keywords": ["summarization", "abstractive", "summary", "document"]
+        "relevant_keywords": ["summarization", "abstractive", "text summary", "document summary"]
     },
     {
         "query": "generative adversarial network image synthesis",
-        "relevant_keywords": ["GAN", "generative", "adversarial", "synthesis", "generator"]
+        "relevant_keywords": ["GAN", "generative adversarial", "image synthesis", "discriminator"]
+    },
+    {
+        "query": "neural machine translation sequence to sequence",
+        "relevant_keywords": ["machine translation", "seq2seq", "encoder decoder", "neural translation"]
+    },
+    {
+        "query": "graph neural network node classification",
+        "relevant_keywords": ["graph neural", "node classification", "GNN", "graph convolution"]
+    },
+    {
+        "query": "object detection bounding box",
+        "relevant_keywords": ["object detection", "bounding box", "YOLO", "anchor"]
+    },
+    {
+        "query": "dropout regularization overfitting",
+        "relevant_keywords": ["dropout", "regularization", "overfitting", "generalization"]
+    },
+    {
+        "query": "word embeddings semantic similarity",
+        "relevant_keywords": ["word embedding", "word2vec", "semantic similarity", "distributed representation"]
+    },
+    {
+        "query": "question answering reading comprehension",
+        "relevant_keywords": ["question answering", "reading comprehension", "SQuAD", "extractive"]
+    },
+    {
+        "query": "knowledge distillation model compression",
+        "relevant_keywords": ["knowledge distillation", "model compression", "teacher student", "pruning"]
+    },
+    {
+        "query": "contrastive learning self supervised representation",
+        "relevant_keywords": ["contrastive learning", "self-supervised", "representation learning", "SimCLR"]
+    },
+    {
+        "query": "named entity recognition sequence labeling",
+        "relevant_keywords": ["named entity", "NER", "sequence labeling", "token classification"]
+    },
+    {
+        "query": "vision transformer image patches",
+        "relevant_keywords": ["vision transformer", "ViT", "image patches", "patch embedding"]
+    },
+    {
+        "query": "speech recognition acoustic model",
+        "relevant_keywords": ["speech recognition", "acoustic model", "ASR", "audio transcription"]
+    },
+    {
+        "query": "batch normalization training deep networks",
+        "relevant_keywords": ["batch normalization", "layer normalization", "training stability", "internal covariate"]
+    },
+    {
+        "query": "sentiment analysis opinion mining",
+        "relevant_keywords": ["sentiment analysis", "opinion mining", "sentiment classification", "polarity"]
+    },
+    {
+        "query": "neural architecture search automated machine learning",
+        "relevant_keywords": ["neural architecture search", "NAS", "AutoML", "architecture optimization"]
+    },
+    {
+        "query": "federated learning privacy distributed training",
+        "relevant_keywords": ["federated learning", "privacy", "distributed training", "local model"]
     }
 ]
