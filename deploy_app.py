@@ -1,4 +1,3 @@
-# deploy_app.py
 import streamlit as st
 import numpy as np
 import faiss
@@ -6,6 +5,7 @@ import json
 import os
 import time
 from sentence_transformers import SentenceTransformer, CrossEncoder
+from huggingface_hub import hf_hub_download
 
 st.set_page_config(
     page_title="arXiv Semantic Search",
@@ -13,27 +13,52 @@ st.set_page_config(
     layout="wide"
 )
 
+# ── Your HuggingFace repo ──────────────────────────────────
+HF_REPO_ID = "your-username/arxiv-semantic-search"  # ← change this
+
 # ── Load everything (cached so it only runs once) ─────────
 @st.cache_resource
 def load_system():
+    
+    # --- Download FAISS index from HuggingFace if not present locally ---
+    if not os.path.exists("arxiv_hnsw.index"):
+        with st.spinner("📥 Downloading FAISS index from HuggingFace..."):
+            hf_hub_download(
+                repo_id=HF_REPO_ID,
+                filename="arxiv_hnsw.index",
+                repo_type="model",
+                local_dir="."          # saves into current folder
+            )
+    
+    # --- Download papers JSON from HuggingFace if not present locally ---
+    if not os.path.exists("arxiv_papers.json"):
+        with st.spinner("📥 Downloading papers data from HuggingFace..."):
+            hf_hub_download(
+                repo_id=HF_REPO_ID,
+                filename="arxiv_papers.json",
+                repo_type="model",
+                local_dir="."
+            )
+
+    # --- Load papers ---
     with open('arxiv_papers.json', 'r') as f:
         papers = json.load(f)
-    
+
     documents = [f"{p['title']}. {p['abstract']}" for p in papers]
-    
-    bi_encoder = SentenceTransformer(
-        'sentence-transformers/all-MiniLM-L6-v2'
-    )
-    cross_encoder = CrossEncoder(
-        'cross-encoder/ms-marco-MiniLM-L-6-v2'
-    )
-    
+
+    # --- Load models (these auto-download from HuggingFace, no change needed) ---
+    bi_encoder = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')
+    cross_encoder = CrossEncoder('cross-encoder/ms-marco-MiniLM-L-6-v2')
+
+    # --- Load FAISS index ---
     index = faiss.read_index('arxiv_hnsw.index')
     index.hnsw.efSearch = 50
-    
+
     return papers, documents, bi_encoder, cross_encoder, index
 
 papers, documents, bi_encoder, cross_encoder, index = load_system()
+
+# ── rest of your code stays exactly the same ──────────────
 
 # ── Search functions ──────────────────────────────────────
 def search_semantic(query, top_k=5):

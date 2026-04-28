@@ -9,3 +9,4 @@ tqdm
 rank-bm25
 scikit-learn
 torchvision
+huggingface_hub
