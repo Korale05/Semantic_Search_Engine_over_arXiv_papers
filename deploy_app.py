@@ -95,9 +95,13 @@ st.markdown(f"Search over **{len(papers):,} research papers** using semantic emb
 
 with st.sidebar:
     st.header("📊 Evaluation Results")
-    st.metric("BM25 MRR", "0.400", help="Keyword search baseline")
-    st.metric("Semantic MRR", "1.000", delta="+150%")
-    st.metric("Re-ranked MRR", "1.000", delta="Perfect score")
+    st.metric("BM25 MRR", "0.708", help="Keyword search baseline")
+    st.metric("Semantic MRR", "0.512")
+    st.metric("Semantic MRR + Re-ranked MRR", "0.875", delta="Perfect score")
+    st.metric("Hybrid RRF", "0.646")
+    st.metric("Hybrid + Re-ranking ", "0.850")
+
+
 
     st.divider()
     st.header("⚙️ Settings")
