@@ -7,6 +7,7 @@
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.100+-green)
 ![FAISS](https://img.shields.io/badge/FAISS-HNSW-orange)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
+**🚀 [Live Demo](https://semanticsearchengineoverarxivpapers-qdhmfbxpvtmbruqmdqcvjk.streamlit.app/)** 
 
 ---
 
@@ -249,10 +250,10 @@ hybrid + re-rank recovers to MRR 0.850 by overriding the noisy RRF ordering.
 
 ## 🛣️ Future Work
 
+- ✅ Deployed on Streamlit Cloud — [Live Demo](https://semanticsearchengineoverarxivpapers-qdhmfbxpvtmbruqmdqcvjk.streamlit.app/)
 - Fine-tune bi-encoder on arXiv query-paper pairs using MultipleNegativesRankingLoss
 - Switch to `all-mpnet-base-v2` (768-dim) for higher quality embeddings
 - Scale to 100K+ papers — HNSW handles millions without code changes
-- Deploy to HuggingFace Spaces for public live demo
 
 ---
 
