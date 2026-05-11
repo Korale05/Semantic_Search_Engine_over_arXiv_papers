@@ -202,6 +202,7 @@ GET /docs
 
 ### MRR — Mean Reciprocal Rank
 Industry-standard metric used at Google, Microsoft, Amazon.
+How early does the FIRST relevant result appear?
 
 ```
 MRR = (1/|Q|) × Σ (1 / rank of first relevant result)
